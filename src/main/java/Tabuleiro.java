@@ -56,3 +56,39 @@ class Tabuleiro {
     
 }
 private String[][] casas = new String[8][8];
+public class Tabuleiro {
+    private String[][] casas;
+    private int rodadas = 0;
+
+    public Tabuleiro() {
+        casas = new String[8][8];
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                casas[i][j] = "   ";
+            }
+        }
+        mostrar();
+    }
+
+    public void mostrar() {
+        System.out.println("   a   b   c   d   e   f   g   h");
+        System.out.println(" +---+---+---+---+---+---+---+---+");
+        for (int i = 0; i < 8; i++) {
+            System.out.print((8 - i) + "|");
+            for (int j = 0; j < 8; j++) {
+                System.out.print(casas[i][j] + "|");
+            }
+            System.out.println(" " + (8 - i));
+            System.out.println(" +---+---+---+---+---+---+---+---+");
+        }
+        System.out.println("   a   b   c   d   e   f   g   h");
+    }
+
+    public boolean acabouOJogo() {
+        return rodadas >= 3;
+    }
+
+    public void incrementarRodada() {
+        this.rodadas++;
+    }
+}
