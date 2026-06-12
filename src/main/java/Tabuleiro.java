@@ -92,3 +92,65 @@ public class Tabuleiro {
         this.rodadas++;
     }
 }
+public class Tabuleiro {
+    private String[][] casas;
+    private int rodadas = 0;
+
+    public Tabuleiro() {
+        casas = new String[8][8];
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                casas[i][j] = "   ";
+            }
+        }
+        colocarPecas();
+        mostrar();
+    }
+
+    public void colocarPecas() {
+        casas[0][0] = " T ";
+        casas[0][1] = " C ";
+        casas[0][2] = " B ";
+        casas[0][3] = " Q ";
+        casas[0][4] = " K ";
+        casas[0][5] = " B ";
+        casas[0][6] = " C ";
+        casas[0][7] = " T ";
+        
+        for (int j = 0; j < 8; j++) {
+            casas[1][j] = " P ";
+            casas[6][j] = " p ";
+        }
+
+        casas[7][0] = " t ";
+        casas[7][1] = " c ";
+        casas[7][2] = " b ";
+        casas[7][3] = " q ";
+        casas[7][4] = " k ";
+        casas[7][5] = " b ";
+        casas[7][6] = " c ";
+        casas[7][7] = " t ";
+    }
+
+    public void mostrar() {
+        System.out.println("   a   b   c   d   e   f   g   h");
+        System.out.println(" +---+---+---+---+---+---+---+---+");
+        for (int i = 0; i < 8; i++) {
+            System.out.print((8 - i) + "|");
+            for (int j = 0; j < 8; j++) {
+                System.out.print(casas[i][j] + "|");
+            }
+            System.out.println(" " + (8 - i));
+            System.out.println(" +---+---+---+---+---+---+---+---+");
+        }
+        System.out.println("   a   b   c   d   e   f   g   h");
+    }
+
+    public boolean acabouOJogo() {
+        return rodadas >= 3;
+    }
+
+    public void incrementarRodada() {
+        this.rodadas++;
+    }
+}
