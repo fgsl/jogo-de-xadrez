@@ -1,4 +1,4 @@
-public class Jogador {
+public abstract class Jogador {
     private char simbolo;
     private String nome;
 
