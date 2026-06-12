@@ -55,3 +55,4 @@ class Tabuleiro {
     }
     
 }
+private String[][] casas = new String[8][8];
