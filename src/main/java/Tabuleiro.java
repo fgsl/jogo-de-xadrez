@@ -1,6 +1,7 @@
+public class Tabuleiro {
+
 private String[][] casas = new String[8][8];
 
-public class Tabuleiro {
     private Peca[][] casas;
     private int rodadas = 0;
 
