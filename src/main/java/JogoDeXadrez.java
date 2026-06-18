@@ -14,8 +14,6 @@ class JogoDeXadrez implements Jogo{
             }
             jogador2.jogar();
         }
-    }class JogoDeXadrez implements Jogo {
-
     @Override
     public void iniciar() {
         Tabuleiro tabuleiro = new Tabuleiro();
