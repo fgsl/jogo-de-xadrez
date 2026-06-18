@@ -2,7 +2,6 @@ class JogoDeXadrez implements Jogo{
     public static void main(String[] args) {
         System.out.println("Felipe Fonseca Sanches");
     }
-}
     public void iniciar() {
         Tabuleiro tabuleiro = new Tabuleiro();
         Jogador jogador1 = new JogadorHumano("Humano");
