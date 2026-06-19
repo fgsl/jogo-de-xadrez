@@ -1,21 +1,10 @@
-// Jogador controlado pela máquina (IA / Sintético)
 public class JogadorSintetico extends Jogador {
-    public JogadorSintetico(String nome) {
-        super(nome);
-    }
 
-    @Override
-    public void jogar() {
-        System.out.println("Jogador Sintético (" + getNome() + ") calculou e fez uma jogada.");
-    }
-}
-public class JogadorSintetico extends Jogador {
     public JogadorSintetico(String nome, char cor) {
         super(nome, cor);
     }
-
-    @Override
-    public boolean jogar(Tabuleiro tabuleiro, String NomeDaPeca, int numeroDaCasa) {
+    public boolean jogar(Tabuleiro tabuleiro, String nomeDaPeca, int numeroDaCasa) {
+        System.out.println("Jogador Sintético fez sua jogada.");
         return true;
     }
 }
