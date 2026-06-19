@@ -15,7 +15,7 @@ public void verificarJogador() {
     
 
     @Test 
-    public void verificarTabuleiro() { // ADICIONADO: public
+    public void verificarTabuleiro() {
         Tabuleiro tabuleiro = new Tabuleiro();
         assertFalse(tabuleiro.acabouOJogo());
     }    
