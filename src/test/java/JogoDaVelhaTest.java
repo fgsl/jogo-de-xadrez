@@ -4,12 +4,13 @@ import org.junit.jupiter.api.Test;
 
 public class JogoDaVelhaTest {
 
-    @Test 
-    public void verificarJogador() { // ADICIONADO: public
-        Jogador jogador = new JogadorHumano("Felipe", 'W');
-        char cor = jogador.getCor();
-        
-        assertEquals('W', cor);
+@Test
+public void verificarJogador() {
+    Jogador jogador = new JogadorHumano("Felipe", 'b'); 
+    char cor = jogador.getCor();
+    
+    assertEquals('b', cor);
+}
     }
     
     @Test 
