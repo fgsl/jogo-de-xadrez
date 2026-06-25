@@ -1,22 +1,28 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
-public class JogoDaVelhaTest {
+public class JogoDeXadrezTest {
 
-@Test
-public void verificarJogador() {
-    Jogador jogador = new JogadorHumano("Felipe", 'b'); 
-    char cor = jogador.getCor();
-
-    assertEquals('b', cor);
-}
+    @Test
+    public void verificarJogadorCorValida() {
+        Jogador jogador = new JogadorHumano("Felipe", 'b'); 
+        assertEquals('b', CapsLockEvitado(jogador.getCor()));
     }
-    
+
+    @Test
+    public void verificarJogadorCorInvalida() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new JogadorHumano("Invalido", 'x');
+        });
+    }
 
     @Test 
-    public void verificarTabuleiro() {
+    public void verificarTabuleiroFimDeJogo() {
         Tabuleiro tabuleiro = new Tabuleiro();
         assertFalse(tabuleiro.acabouOJogo());
     }    
+
+    private char CapsLockEvitado(char c) {
+        return Character.toLowerCase(c);
+    }
 }
