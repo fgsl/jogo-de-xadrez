@@ -1,25 +1,24 @@
-class JogoDeXadrez implements Jogo {
-public static void main(String[] args) {
+public class JogoDeXadrez implements Jogo {
+
+    public static void main(String[] args) {
         JogoDeXadrez partida = new JogoDeXadrez();
         partida.iniciar();
-        System.out.println("SEU NOME COMPLETO");
+        System.out.println("Gemini AI");
     }
 
+    @Override
     public void iniciar() {
         Tabuleiro tabuleiro = new Tabuleiro();
         Jogador jogador1 = new JogadorHumano("Humano", 'b');
         Jogador jogador2 = new JogadorSintetico("Sintetico", 'p');
 
         while (!tabuleiro.acabouOJogo()) {
-            jogador1.jogar(tabuleiro, "Peão", 12);
+            jogador1.jogar(tabuleiro, "P1b", 12);
             if (tabuleiro.acabouOJogo()) {
                 break;
             }
-            jogador2.jogar(tabuleiro, "Cavalo", 24);
+            jogador2.jogar(tabuleiro, "H1p", 24);
+            break; 
         }
     }
-
- 
-    
 }
-
