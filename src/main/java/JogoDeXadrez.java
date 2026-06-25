@@ -1,24 +1,28 @@
-public class JogoDeXadrez implements Jogo {
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
-    public static void main(String[] args) {
-        JogoDeXadrez partida = new JogoDeXadrez();
-        partida.iniciar();
-        System.out.println("Gemini AI");
+public class JogoDeXadrezTest {
+
+    @Test
+    public void verificarJogadorCorValida() {
+        Jogador jogador = new JogadorHumano("Felipe", 'b'); 
+        assertEquals('b', CapsLockEvitado(jogador.getCor()));
     }
 
-    @Override
-    public void iniciar() {
-        Tabuleiro tabuleiro = new Tabuleiro();
-        Jogador jogador1 = new JogadorHumano("Humano", 'b');
-        Jogador jogador2 = new JogadorSintetico("Sintetico", 'p');
+    @Test
+    public void verificarJogadorCorInvalida() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new JogadorHumano("Invalido", 'x');
+        });
+    }
 
-        while (!tabuleiro.acabouOJogo()) {
-            jogador1.jogar(tabuleiro, "P1b", 12);
-            if (tabuleiro.acabouOJogo()) {
-                break;
-            }
-            jogador2.jogar(tabuleiro, "H1p", 24);
-            break; 
-        }
+    @Test 
+    public void verificarTabuleiroFimDeJogo() {
+        Tabuleiro tabuleiro = new Tabuleiro();
+        assertFalse(tabuleiro.acabouOJogo());
+    }    
+
+    private char CapsLockEvitado(char c) {
+        return Character.toLowerCase(c);
     }
 }
