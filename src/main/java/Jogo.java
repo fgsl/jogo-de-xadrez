@@ -1,4 +1,3 @@
-interface Jogo
-{
+public interface Jogo {
     void iniciar();
 }
