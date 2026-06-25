@@ -1,7 +1,8 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
-public class JogoDeXadrezTest {
+// Mudado de JogoDeXadrezTest para JogoDaVelhaTest
+public class JogoDaVelhaTest {
 
     @Test
     public void verificarJogadorCorValida() {
