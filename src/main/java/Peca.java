@@ -10,38 +10,9 @@ public abstract class Peca {
     }
 }
 
-class Rei extends Peca {
-    public Rei(int numero, char cor) {
-        super("K", numero, cor);
-    }
-}
-
-class Rainha extends Peca {
-    public Rainha(int numero, char cor) {
-        super("Q", numero, cor);
-    }
-}
-
-class Torre extends Peca {
-    public Torre(int numero, char cor) {
-        super("T", numero, cor);
-    }
-}
-
-class Bispo extends Peca {
-    public Bispo(int numero, char cor) {
-        super("B", numero, cor);
-    }
-}
-
-class Cavalo extends Peca {
-    public Cavalo(int numero, char cor) {
-        super("H", numero, cor);
-    }
-}
-
-class Peao extends Peca {
-    public Peao(int numero, char cor) {
-        super("P", numero, cor);
-    }
-}
+class Rei extends Peca { public Rei(int n, char c) { super("K", n, c); } }
+class Rainha extends Peca { public Rainha(int n, char c) { super("Q", n, c); } }
+class Torre extends Peca { public Torre(int n, char c) { super("T", n, c); } }
+class Bispo extends Peca { public Bispo(int n, char c) { super("B", n, c); } }
+class Cavalo extends Peca { public Cavalo(int n, char c) { super("H", n, c); } }
+class Peao extends Peca { public Peao(int n, char c) { super("P", n, c); } }
