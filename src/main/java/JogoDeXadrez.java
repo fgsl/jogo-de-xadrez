@@ -22,3 +22,4 @@ public class JogoDeXadrez implements Jogo {
         }
     }
 }
+
